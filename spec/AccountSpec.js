@@ -48,5 +48,12 @@ describe("Account", function() {
       account.withdraw(500, "14-01-2012")
       expect(account.getBalance()).toEqual(500)
     });
+
+    it('updates balance on two withdrawals', function() {
+      account.deposit(1000, "10-01-2012")
+      account.withdraw(500, "14-01-2012")
+      account.withdraw(100, "15-01-2012")
+      expect(account.getBalance()).toEqual(400)
+    });
   })
 });
