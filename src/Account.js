@@ -9,15 +9,17 @@ Account.prototype = {
     this.balance += amount;
   },
 
+  withdraw: function(amount, date) {
+    this.transations.push([-amount, date])
+    this.balance -= amount
+  },
+
   getTransactions: function() {
     return this.transations;
   },
 
   getBalance: function() {
     return this.balance;
-  },
-
-  withdraw: function(amount, date) {
-    this.transations.push([-amount, date])
   }
+
 }
