@@ -15,5 +15,9 @@ Account.prototype = {
 
   getBalance: function() {
     return this.balance;
+  },
+
+  withdraw: function(amount, date) {
+    this.transations.push([-amount, date])
   }
 }

@@ -28,4 +28,12 @@ describe("Account", function() {
       expect(account.getBalance()).toEqual(3000)
     });
   });
+
+  describe('#withdraw', function() {
+    it('can accept deposit amount and date', function() {
+      account.deposit(1000, "10-01-2012")
+      account.withdraw(500, "14-01-2012")
+      expect(account.getTransactions()).toEqual([[1000, "10-01-2012"], [-500, "14-01-2012"]])
+    });
+  })
 });
