@@ -35,5 +35,12 @@ describe("Account", function() {
       account.withdraw(500, "14-01-2012")
       expect(account.getTransactions()).toEqual([[1000, "10-01-2012"], [-500, "14-01-2012"]])
     });
+
+    it('can accept two withdrawals', function() {
+      account.deposit(1000, "10-01-2012")
+      account.withdraw(500, "14-01-2012")
+      account.withdraw(100, "15-01-2012")
+      expect(account.getTransactions()).toEqual([[1000, "10-01-2012"], [-500, "14-01-2012"], [-100, "15-01-2012"]])
+    });
   })
 });
