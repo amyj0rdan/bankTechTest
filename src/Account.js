@@ -9,7 +9,7 @@ Account.prototype = {
     this.balance += amount;
   },
 
-  withdraw: function(amount, date) {
+  withdraw: function(amount, date = new Date()) {
     this.transations.push([-amount, date])
     this.balance -= amount
   },
