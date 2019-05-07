@@ -5,7 +5,10 @@ describe("Account", function() {
     account = new Account;
   });
 
-  it('has a method #deposit', function() {
-    expect(account.deposit).toBeDefined();
+  describe("#deposit", function() {
+    it('can accept deposit amount and date', function() {
+      account.deposit(1000, "10-01-2012")
+      expect(account.getTransactions()).toEqual([[1000, "10-01-2012"]])
+    });
   });
 });
