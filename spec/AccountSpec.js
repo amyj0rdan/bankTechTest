@@ -16,5 +16,16 @@ describe("Account", function() {
       account.deposit(2000, "13-01-2012")
       expect(account.getTransactions()).toEqual([[1000, "10-01-2012"], [2000, "13-01-2012"]])
     });
+
+    it('updates account balance with deposit', function() {
+      account.deposit(1000, "10-01-2012")
+      expect(account.getBalance()).toEqual(1000)
+    });
+
+    it('updates account balance with two deposit', function() {
+      account.deposit(1000, "10-01-2012")
+      account.deposit(2000, "13-01-2012")
+      expect(account.getBalance()).toEqual(3000)
+    });
   });
 });
