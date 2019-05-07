@@ -4,7 +4,7 @@ function Account() {
 }
 
 Account.prototype = {
-  deposit: function(amount, date) {
+  deposit: function(amount, date = new Date()) {
     this.transations.push([amount, date]);
     this.balance += amount;
   },
