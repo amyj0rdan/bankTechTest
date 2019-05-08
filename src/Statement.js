@@ -15,7 +15,6 @@ Statement.prototype = {
 
   formatTransaction(transaction) {
     if (transaction["amount"] > 0) {
-
       return `${transaction["date"].toLocaleDateString()} || ${transaction["amount"].toFixed(2)} || || ${transaction["balance"].toFixed(2)}`
     }
     if (transaction["amount"] < 0) {

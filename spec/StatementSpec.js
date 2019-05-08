@@ -3,7 +3,7 @@ describe("Statement", function() {
 
   var accountDeposit = {
     getTransactions: function() {
-      return [{amount: 500, date: new Date(2019, 4, 7), balance: 500}]
+      return [{amount: 500, date: new Date("2019 05 07"), balance: 500}]
     },
     getBalance: function() {
       return 500;
@@ -12,7 +12,7 @@ describe("Statement", function() {
 
   var accountMultiple = {
     getTransactions: function() {
-      return [{amount: 500, date: new Date(2019, 4, 7), balance: 500}, {amount: -100, date: new Date(2019, 4, 9), balance: 400}]
+      return [{amount: 500, date: new Date("2019 05 07"), balance: 500}, {amount: -100, date: new Date("2019 05 09"), balance: 400}]
     },
     getBalance: function() {
       return 400;
