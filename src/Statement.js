@@ -3,21 +3,27 @@ function Statement(account) {
 }
 
 Statement.prototype = {
-  print: function() {
+  print() {
     var statement = "date || credit || debit || balance\n";
 
-    for(var i = 0; i < this.getAccountTransations().length; i++) {
-      statement += this.formatTransaction(this.getAccountTransations()[i]);
+    for(var i = this.getAccountTransactions().length; i > 0; i--) {
+      statement += this.formatTransaction(this.getAccountTransactions()[i - 1]) + "\n";
     }
 
-    return statement;
+    return statement.slice(0, -1);
   },
 
-  formatTransaction: function(transaction) {
-    return `${transaction[1].toLocaleDateString()} || ${transaction[0].toFixed(2)} || || ${this.account.getBalance().toFixed(2)}`
+  formatTransaction(transaction) {
+    if (transaction["amount"] > 0) {
+
+      return `${transaction["date"].toLocaleDateString()} || ${transaction["amount"].toFixed(2)} || || ${transaction["balance"].toFixed(2)}`
+    }
+    if (transaction["amount"] < 0) {
+      return `${transaction["date"].toLocaleDateString()} || || ${(transaction["amount"] * -1).toFixed(2)} || ${transaction["balance"].toFixed(2)}`
+    }
   },
 
-  getAccountTransations: function() {
-    return this.account.getTransations();
+  getAccountTransactions() {
+    return this.account.getTransactions();
   }
 }

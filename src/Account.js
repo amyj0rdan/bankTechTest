@@ -4,21 +4,21 @@ function Account() {
 }
 
 Account.prototype = {
-  deposit: function(amount, date = new Date()) {
-    this.transations.push([amount, date]);
+  deposit(amount, date = new Date()) {
     this.balance += amount;
+    this.transations.push({amount: amount, date: date, balance: this.getBalance()});
   },
 
-  withdraw: function(amount, date = new Date()) {
-    this.transations.push([-amount, date])
+  withdraw(amount, date = new Date()) {
     this.balance -= amount
+    this.transations.push({amount: -amount, date: date, balance: this.getBalance()})
   },
 
-  getTransactions: function() {
+  getTransactions() {
     return this.transations;
   },
 
-  getBalance: function() {
+  getBalance() {
     return this.balance;
   }
 
