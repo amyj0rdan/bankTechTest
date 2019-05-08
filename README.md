@@ -40,8 +40,11 @@ date || credit || debit || balance
 | --- | --- |
 | deposit | takes date and +ve amount |
 | withdrawal | takes date and -ve amount |
-| currentBalance | produces current balance from transactions |
+| getBalance | produces current balance from transactions |
+| getTransactions | returns all transactions currently on account |
 
 | Statement(account) | |
 | --- | --- |
 | print | uses transaction details from account to produce formatted display |
+| formatTransaction | takes a transaction as a parameter and formats it whether it is a +ve or -ve transaction |
+| getAccountTransactions | returns transactions on the account |

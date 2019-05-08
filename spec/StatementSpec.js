@@ -1,9 +1,9 @@
-describe("Statement", function() {
+describe('Statement', function() {
   var statement;
 
   var accountDeposit = {
     getTransactions: function() {
-      return [{amount: 500, date: new Date("2019 05 07"), balance: 500}]
+      return [{amount: 500, date: new Date('2019 05 07'), balance: 500}]
     },
     getBalance: function() {
       return 500;
@@ -12,7 +12,7 @@ describe("Statement", function() {
 
   var accountMultiple = {
     getTransactions: function() {
-      return [{amount: 500, date: new Date("2019 05 07"), balance: 500}, {amount: -100, date: new Date("2019 05 09"), balance: 400}]
+      return [{amount: 500, date: new Date('2019 05 07'), balance: 500}, {amount: -100, date: new Date('2019 05 09'), balance: 400}]
     },
     getBalance: function() {
       return 400;
@@ -26,7 +26,7 @@ describe("Statement", function() {
     })
 
     it('returns formatted statement for one transations', function(){
-      expect(statement.print()).toEqual("date || credit || debit || balance\n07/05/2019 || 500.00 || || 500.00")
+      expect(statement.print()).toEqual('date || credit || debit || balance\n07/05/2019 || 500.00 || || 500.00')
     })
   })
 
@@ -36,7 +36,7 @@ describe("Statement", function() {
     })
 
     it('returns formatted statement for multiple transactions', function() {
-      expect(statement.print()).toEqual("date || credit || debit || balance\n09/05/2019 || || 100.00 || 400.00\n07/05/2019 || 500.00 || || 500.00")
+      expect(statement.print()).toEqual('date || credit || debit || balance\n09/05/2019 || || 100.00 || 400.00\n07/05/2019 || 500.00 || || 500.00')
     })
   })
 })

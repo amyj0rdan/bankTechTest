@@ -1,6 +1,6 @@
 function Account() {
-  this.transations = []
-  this.balance = 0
+  this.transations = [];
+  this.balance = 0;
 }
 
 Account.prototype = {
@@ -14,7 +14,7 @@ Account.prototype = {
   },
 
   withdraw(amount, date = new Date()) {
-    this.balance -= amount
+    this.balance -= amount;
     this.transations.push({
       amount: -amount,
       date: date,
