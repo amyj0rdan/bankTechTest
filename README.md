@@ -48,3 +48,20 @@ date || credit || debit || balance
 | print | uses transaction details from account to produce formatted display |
 | formatTransaction | takes a transaction as a parameter and formats it whether it is a +ve or -ve transaction |
 | getAccountTransactions | returns transactions on the account |
+
+## Getting started
+
+```bash
+> git clone https://github.com/amyj0rdan/bankTechTest
+> npm install
+```
+
+## Running tests
+
+```bash
+> npm test
+> npm run coverage #run tests with test coverage
+```
+
+## Usage
+Open 'index.html' in browser
