@@ -1,3 +1,6 @@
+var Account = require('../src/Account.js')
+var Statement = require('../src/Statement.js')
+
 describe('Feature Test', function() {
   beforeEach(function() {
     account = new Account();

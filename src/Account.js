@@ -31,3 +31,8 @@ Account.prototype = {
   }
 
 }
+
+if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') )
+  {
+    module.exports = Account;
+  }

@@ -1,3 +1,5 @@
+var Statement = require('../src/Statement.js')
+
 describe('Statement', function() {
   var statement;
 
