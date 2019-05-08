@@ -25,7 +25,7 @@ describe("Statement", function() {
       statement = new Statement(accountDeposit);
     })
 
-    it('returns formatted statement', function(){
+    it('returns formatted statement for one transations', function(){
       expect(statement.print()).toEqual("date || credit || debit || balance\n07/05/2019 || 500.00 || || 500.00")
     })
   })
@@ -35,7 +35,7 @@ describe("Statement", function() {
       statement = new Statement(accountMultiple);
     })
 
-    it('returns formatted statement', function() {
+    it('returns formatted statement for multiple transactions', function() {
       expect(statement.print()).toEqual("date || credit || debit || balance\n09/05/2019 || || 100.00 || 400.00\n07/05/2019 || 500.00 || || 500.00")
     })
   })

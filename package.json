@@ -1,0 +1,26 @@
+{
+  "name": "banktechtest",
+  "version": "1.0.0",
+  "description": "Makers Academy Week 10 tech test challenge",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amyj0rdan/bankTechTest.git"
+  },
+  "author": "Amy Jordan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amyj0rdan/bankTechTest/issues"
+  },
+  "homepage": "https://github.com/amyj0rdan/bankTechTest#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-jasmine": "^2.10.1"
+  }
+}
